@@ -29,8 +29,6 @@ class SLDPipelineOutput(BaseOutput):
     nsfw_content_detected: Optional[List[bool]]
     applied_safety_concept: Optional[str]
 
-from .sld_pipeline import SLDPipeline
-
 if is_transformers_available() and is_torch_available():
     from .sld_pipeline import SLDPipeline
 
