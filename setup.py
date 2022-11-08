@@ -14,7 +14,7 @@ setup(
     author="Manuel Brack",
     author_email="brac@cs.tu-darmstadt.de",
     url="https://github.com/ml-research/safe-latent-diffusion",
-    py_modules=["clip"],
+    py_modules=["sld"],
     packages=find_packages(),
     install_requires=[
         str(r)
