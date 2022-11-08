@@ -15,9 +15,6 @@ jaxlib>=0.1.65
 modelcards>=0.1.4
 numpy
 parameterized
-pytest
-pytest-timeout
-pytest-xdist
 scipy
 regex!=2019.12.17
 requests
