@@ -8,6 +8,8 @@ from PIL import Image
 
 from diffusers.utils import BaseOutput, is_torch_available, is_transformers_available
 
+__version__ = "0.0.1"
+
 @dataclass
 class SLDPipelineOutput(BaseOutput):
     """
@@ -27,6 +29,7 @@ class SLDPipelineOutput(BaseOutput):
     nsfw_content_detected: Optional[List[bool]]
     applied_safety_concept: Optional[str]
 
+from .sld_pipeline import SLDPipeline
 
 if is_transformers_available() and is_torch_available():
     from .sld_pipeline import SLDPipeline
