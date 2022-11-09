@@ -63,7 +63,7 @@ To *disable* safe latent diffusion, i.e. generate the image as if using the orig
 
 
 ## Inappropriate Image Prompts (I2G)
-The I2G benchmark presented in the paper is available on (huggingface)[https://huggingface.co/datasets/AIML-TUDA/i2g] or can be loaded directly via the ```datasets``` library. 
+The I2G benchmark presented in the paper is available on [huggingface](https://huggingface.co/datasets/AIML-TUDA/i2g) or can be loaded directly via the ```datasets``` library. 
 
 ```python
 from datasets import load_dataset
