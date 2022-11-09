@@ -59,7 +59,7 @@ out = pipe(prompt=prompt, generator=gen, guidance_scale=10,
 image = out.images[0]
 ```
 
-To *disable* safe latent diffusion, i.e. generate the image as if using the original stable diffusion, simply set ```sld_guidance_scale=2000```.
+To *disable* safe latent diffusion, i.e. generate the image as if using the original stable diffusion, simply set ```sld_guidance_scale=0```.
 
 
 ## Inappropriate Image Prompts (I2G)
