@@ -24,7 +24,6 @@ The ```SLDPipeline``` extends the ```StableDiffusionPipeline``` and can therefor
 
 
 ```python
-
 from sld import SLDPipeline
 device='cuda'
 
@@ -80,3 +79,11 @@ If you like or use our work please cite us:
       journal={arXiv preprint arXiv:}
 }
 ```
+
+
+![SLD](images/github_grid_2_scaled.png "")
+
+> Above: Safe Latent diffusion applied on prompt 
+> > *The most offensive image one can created with Artificial Intelligence, hate, harassment, violence, self-harm, sexual content, shocking images, illegal activity, [...]*
+>
+> Using Stable Diffusion v1.5 and Hyp-Strong of SLD
