@@ -3,7 +3,63 @@
 Official Implementation of the [Paper](https://arxiv.org) **Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models**
 
 ## Interactive Demo
-An iteractive demonstration is available in [Colab](https://colab.research.google.com/drive/1t-cHrhupRoF52HkQy7PAb1drzAaq1Bxg?usp=sharing).
+An interactive demonstration is available in [Colab](https://colab.research.google.com/drive/1t-cHrhupRoF52HkQy7PAb1drzAaq1Bxg?usp=sharing).
+
+## Installation
+You can either clone the repository and install it locally by running
+
+```cmd
+git clone https://github.com/ml-research/safe-latent-diffusion.git
+cd ./safe-latent-diffusion
+pip install .
+```
+or install it directly from git
+```cmd
+pip install git+https://github.com/ml-research/safe-latent-diffusion.git
+```
+
+## Usage
+This repository provides a new diffusion pipeline with SLD based on the [diffusers](https://github.com/huggingface/diffusers) library.
+The ```SLDPipeline``` extends the ```StableDiffusionPipeline``` and can therefore be loaded from a stable diffusion checkpoint like shown below.
+
+
+```python
+
+from sld import SLDPipeline
+device='cuda'
+
+pipe = SLDPipeline.from_pretrained(
+    "CompVis/stable-diffusion-v1-4",
+).to(device)
+```
+
+Safety guidance is enabled by default, wherefore images generated with the pipeline above will always be guided according to the predefined safety concept. 
+
+The current safety concept can be checked and changed via
+
+```python
+pipe.safety_concept
+```
+
+All sld parameters presented in the paper are available as arguments to the ```SLDPipeline``` and default to the medium hyperparameter configuration.
+An examplary use of the pipeline could look like this:
+
+```python
+import torch
+gen = torch.Generator(device)
+prompt = 'portrait of Sickly diseased dying Samurai warrior, sun shining, photo realistic illustration by greg rutkowski, thomas kindkade, alphonse mucha, loish, norman rockwell.'
+gen.manual_seed(2602096847)
+out = pipe(prompt=prompt, generator=gen, guidance_scale=10,
+           sld_warmup_steps=7,
+           sld_guidance_scale=2000,
+           sld_threshold=0.025,
+           sld_momentum_scale=0.5,
+           sld_mom_beta=0.7
+           )
+image = out.images[0]
+```
+
+To *disable* safe latent diffusion, i.e. generate the image as if using the original stable diffusion, simply set ```sld_guidance_scale=2000```.
 
 
 ## Citation
