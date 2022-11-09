@@ -13,6 +13,6 @@ If you like or use our work please cite us:
       title={Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models}, 
       author={Patrick Schramowski and Manuel Brack and Björn Deiseroth and Kristian Kersting},
       year={2022},
-      journal={arXiv preprint arXiv:TODO}
+      journal={arXiv preprint arXiv:}
 }
 ```
