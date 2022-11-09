@@ -68,7 +68,7 @@ The I2G benchmark presented in the paper is available on (huggingface)[https://h
 ```python
 from datasets import load_dataset
 data = load_dataset('AIML-TUDA/i2g', split='train')
-
+``
 
 ## Citation
 If you like or use our work please cite us:
