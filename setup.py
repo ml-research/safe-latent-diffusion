@@ -10,7 +10,7 @@ setup(
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     keywords="deep learning",
-    license="GNU",
+    license="MIT",
     author="Manuel Brack",
     author_email="brac@cs.tu-darmstadt.de",
     url="https://github.com/ml-research/safe-latent-diffusion",
