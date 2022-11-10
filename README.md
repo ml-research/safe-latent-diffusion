@@ -1,6 +1,6 @@
 # Safe Latent Diffusion
 
-Official Implementation of the [Paper](https://arxiv.org) **Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models**
+Official Implementation of the [Paper](http://arxiv.org/abs/2211.05105) **Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models**
 
 ## Interactive Demo
 An interactive demonstration is available in [Colab](https://colab.research.google.com/drive/1t-cHrhupRoF52HkQy7PAb1drzAaq1Bxg?usp=sharing).
@@ -76,7 +76,7 @@ If you like or use our work please cite us:
       title={Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models}, 
       author={Patrick Schramowski and Manuel Brack and Björn Deiseroth and Kristian Kersting},
       year={2022},
-      journal={arXiv preprint arXiv:}
+      journal={arXiv preprint arXiv:2211.05105}
 }
 ```
 
