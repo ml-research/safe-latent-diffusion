@@ -3,7 +3,7 @@
 Official Implementation of the [Paper](http://arxiv.org/abs/2211.05105) **Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models**
 
 ## Interactive Demo
-An interactive demonstration is available in [Colab](https://colab.research.google.com/drive/1t-cHrhupRoF52HkQy7PAb1drzAaq1Bxg?usp=sharing).
+An interactive demonstration is available in Colab [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/drive/1t-cHrhupRoF52HkQy7PAb1drzAaq1Bxg?usp=sharing](https://colab.research.google.com/github/ml-research/safe-latent-diffusion/blob/main/examples/Safe%20Latent%20Diffusion.ipynb)).
 
 ## Installation
 You can either clone the repository and install it locally by running
@@ -28,7 +28,7 @@ from sld import SLDPipeline
 device='cuda'
 
 pipe = SLDPipeline.from_pretrained(
-    "CompVis/stable-diffusion-v1-4",
+    "AIML-TUDA/stable-diffusion-safe",
 ).to(device)
 ```
 
