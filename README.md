@@ -61,12 +61,12 @@ image = out.images[0]
 To *disable* safe latent diffusion, i.e. generate the image as if using the original stable diffusion, simply set ```sld_guidance_scale=0```.
 
 
-## Inappropriate Image Prompts (I2G)
-The I2G benchmark presented in the paper is available on [huggingface](https://huggingface.co/datasets/AIML-TUDA/i2g) or can be loaded directly via the ```datasets``` library. 
+## Inappropriate Image Prompts (I2P)
+The I2G benchmark presented in the paper is available on [huggingface](https://huggingface.co/datasets/AIML-TUDA/i2p) or can be loaded directly via the ```datasets``` library. 
 
 ```python
 from datasets import load_dataset
-data = load_dataset('AIML-TUDA/i2g', split='train')
+data = load_dataset('AIML-TUDA/i2p', split='train')
 ```
 
 ## Citation
