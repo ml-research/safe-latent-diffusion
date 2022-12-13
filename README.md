@@ -3,7 +3,8 @@
 Official Implementation of the [Paper](http://arxiv.org/abs/2211.05105) **Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models**
 
 ## Interactive Demo
-An interactive demonstration is available in Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ml-research/safe-latent-diffusion/blob/main/examples/Safe%20Latent%20Diffusion.ipynb)
+An interactive demonstration is available on huggingface and also in Colab. 
+[![Huggingface Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/AIML-TUDA/safe-stable-diffusion) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ml-research/safe-latent-diffusion/blob/main/examples/Safe%20Latent%20Diffusion.ipynb)
 
 ## Installation
 You can either clone the repository and install it locally by running
@@ -60,6 +61,20 @@ image = out.images[0]
 
 To *disable* safe latent diffusion, i.e. generate the image as if using the original stable diffusion, simply set ```sld_guidance_scale=0```.
 
+## Use in 🧨 Diffusers
+
+Safe Latent Diffusion is fully integrated in [🧨diffusers](https://huggingface.co/docs/diffusers/index). 
+Loading the pipeline can simply be done like this:
+
+```python
+from diffusers import DiffusionPipeline
+
+device='cuda'
+
+pipe = DiffusionPipeline.from_pretrained(
+    "AIML-TUDA/stable-diffusion-safe",
+).to(device)
+```
 
 ## Inappropriate Image Prompts (I2P)
 The I2G benchmark presented in the paper is available on [huggingface](https://huggingface.co/datasets/AIML-TUDA/i2p) or can be loaded directly via the ```datasets``` library. 
