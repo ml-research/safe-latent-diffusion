@@ -87,11 +87,11 @@ data = load_dataset('AIML-TUDA/i2p', split='train')
 ## Citation
 If you like or use our work please cite us:
 ```bibtex
-@article{schramowski2022safe,
+@inproceedings{schramowski2022safe,
       title={Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models}, 
       author={Patrick Schramowski and Manuel Brack and Björn Deiseroth and Kristian Kersting},
-      year={2022},
-      journal={arXiv preprint arXiv:2211.05105}
+      year={2023},
+      booktitle={Proceedings of the {IEEE} Conference on Computer Vision and Pattern Recognition ({CVPR})},
 }
 ```
 
